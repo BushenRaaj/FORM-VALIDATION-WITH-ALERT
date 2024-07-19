@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="forms">
+        <h1>REGISTION FORM</h1>
+        <form  name="validateform" action ="index.html" method="post" onsubmit="return validationform()">
+            firstname:<input type="text" name="firstname"><br><br>
+            lastname:<input type="text" name="lastname"><br><br>
+            city:<input type="text" name="city"><br><br>
+            phone_no:<input type="number" name="phone_no"><br><br>
+            address:<textarea type="text" name="address"></textarea><br>
+            <button type="submit" value="submit">Submit</button>
+            </form>
+    </div>
+    <script>
+        function validationform(){
+            var firstname=document.validateform.firstname.value;
+            var lastname=document.validateform.lastname.value;
+            var city=document.validateform.city.value;
+            var phone_no=document.validateform.phone_no.value;
+            var address=document.validateform.address.value;
+            
+            if(firstname == null || firstname ==""){
+                alert("firstname should not be blank");
+                return false;
+            }
+            else if(lastname == null || lastname ==""){
+                alert("lastname should not be blank");
+                return false;
+            }
+            else if(city == null || city ==""){
+                alert("city should not be blank");
+                return false;
+            }
+            else if(phone_no.length<10 ||phone_no.length>10 ){
+                alert("invalid number");
+                return false;
+            }
+            else if(address == null || address ==""){
+                alert("address should not be blank");
+                return false;
+            }
+            else{
+                alert("Form Submitted Successfully");
+                return true;
+            }
+        }
+    </script>
+</body>
+</html>

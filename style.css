@@ -1,0 +1,43 @@
+h1{
+    color: aliceblue;
+}
+.forms {
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    color: aliceblue;
+    font-weight: bolder;
+    background-image: url(img/cobg.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border: 1px solid palevioletred;
+    border-radius: 10px;
+}
+.forms form {
+    display: flex;
+    flex-direction: column;
+}
+
+.forms input, .forms textarea, .forms button {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid palevioletred;
+    border-radius: 10px;
+}
+.forms input:focus{
+    background-color: antiquewhite;
+}
+.forms textarea:focus{
+    background-color: antiquewhite;
+}
+.forms button:focus{
+    background-color: antiquewhite;
+}
+.forms button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+}
+.forms button:hover {
+    background-color: #45a049;
+}
